@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surprise</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, pink, purple);
+            font-family: Arial;
+        }
+
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 22px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <body>
+
+<div id="loginBox" style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,pink,purple);
+font-family:Arial;
+">
+
+    <h1 style="color:white;">🔐 Enter Password</h1>
+
+    <input id="password" type="password" placeholder="Enter password"
+    style="padding:10px; font-size:18px; border-radius:10px; border:none;">
+
+    <br>
+
+    <button onclick="checkPassword()"
+    style="padding:10px 20px; font-size:18px; border:none; border-radius:20px; cursor:pointer;">
+        Enter
+    </button>
+
+    <p id="error" style="color:white;"></p>
+
+</div>
+
+<script>
+function checkPassword() {
+    let pass = document.getElementById("password").value;
+
+    if(pass === "2106") {
+        window.location.href = "birthday.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong password ❌";
+    }
+}
+</script>
+
+</body>
+</body>
+</html>
