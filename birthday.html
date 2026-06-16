@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Wish</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial;
+            margin-top: 80px;
+          }
+  h1 {
+      color: darked;
+      font-size: 50px;
+     }
+
+    p{
+      font-size: 24px;
+      color: black;
+    }
+ body { ... }
+   h1 { ... }
+   p { ... }
+
+   .heart {
+       position: fixed;
+       top: -50px;
+       font-size: 30px;
+       animation: fall 5s linear infinite;
+   }
+
+   @keyframes fall {
+       from { transform: translateY(0); }
+       to { transform: translateY(800px); }
+   }
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 14px;
+    opacity: 0.9;
+    top: -20px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+.music-btn {
+    background: linear-gradient(45deg, #ff4dff, #4dd2ff);
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+}
+
+.star {
+    position: absolute;
+    font-size: 30px;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+.signature {
+    margin-top: 40px;
+    font-size: 22px;
+    font-style: italic;
+}
+.fancy-btn {
+    padding: 18px 35px;
+    font-size: 24px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 15px;
+    background: linear-gradient(135deg, #ff66b3, #9966ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.fancy-btn:hover {
+    transform: scale(1.08);
+}
+   </style>  
+</head>
+
+<body>
+
+   <audio id="bgmusic" loop>
+    <source src="Rozana - Naam Shabana (pagalall.com)-[AudioTrimmer.com].mp3" type="audio/mpeg">
+</audio>
+<audio id="finalMusic" loop>
+    <source src="_Beliya_Lekh_Ringtone_(by Fringster.com).mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="document.getElementById('bgmusic').play()">
+🎵 Play Music
+</button>
+    <h1>Happy Birthday Rohit Jii!</h1>
+   <img src="photo8.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo2.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo3.jpeg" width="400" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo7.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo4.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo1.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo5.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+<img src="photo6.jpeg" width="300" style="border-radius:20px; box-shadow: 0px 4px 12px gray;">
+
+    <p>Aap bahut pyaare hai aur mujhe aap par proud hai| Wishing you happiness and lots of success!</p>
+
+<button class="fancy-btn" onclick="showMessage()">Click for Surprise 🎁</button>
+
+
+<button class="fancy-btn" onclick="showEnding()">Final Message ❤️</button>
+
+
+<div id="endingScreen" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+color:white;
+font-size:32px;
+text-align:center;
+padding-top:200px;
+z-index:9999;
+overflow:hidden;
+">
+
+    <div class="star" style="top:10%; left:20%;">✨</div>
+    <div class="star" style="top:25%; left:75%;">✨</div>
+    <div class="star" style="top:60%; left:15%;">✨</div>
+    <div class="star" style="top:80%; left:85%;">✨</div>
+    <div class="star" style="top:40%; left:50%;">✨</div>
+
+Thank you for existing ❤️<br><br>
+Happy Birthday Handsome✨
+
+
+<div class="signature">
+      — Made with love by your Rachna❤️
+</div>
+
+<br><br>
+<button onclick="goBack()">Go Back ⬅️</button>
+
+</div>
+   
+ <div id="surpriseBox" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:30px;
+width:500px;
+border-radius:25px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+text-align:center;
+z-index:9999;
+">
+
+    <h2>🎁 Surprise!</h2>
+
+    <p>
+       "Surprise! 🎉 Aap bahut jyada special hai isiliye aap special treatment desrve karte hai...bhagwan jii kare ki aapki saari ichhaye puri ho, aap jo chahte hai wo aapko mil jaaye....aur aapki life me koi problem na aaye chahe wo problem mai hi kyu na hou.<br><br>
+Happy birthdayy to youu...happy birthdayy to you....happy birthday happy birthday dear Rohit jii.You deserve all the happiness."<br><br>
+I LOVE YOU ❤️<br><br>
+
+    </p>
+
+    <button onclick="closeSurprise()">Close</button>
+</div>
+ 
+<script>
+function showMessage() {
+    document.getElementById("surpriseBox").style.display = "block";
+}
+
+function closeSurprise() {
+    document.getElementById("surpriseBox").style.display = "none";
+}
+
+</script>
+
+<script>
+function createHeart() {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart";
+    heart.style.left = Math.random() * 90 + "%";
+    heart.style.fontSize = (20 + Math.random() * 30) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}
+
+setInterval(createHeart, 500);
+</script>
+<script>
+function createConfetti() {
+    const c = document.createElement("div");
+    c.className = "confetti";
+
+    const colors = ["#ff4d4d", "#4dff4d", "#4d4dff", "#ffcc00", "#ff4dff", "#4dffff"];
+
+    c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.animationDuration = (2 + Math.random() * 3) + "s";
+
+    document.body.appendChild(c);
+
+    setTimeout(() => {
+        c.remove();
+    }, 5000);
+}
+
+setInterval(createConfetti, 120);
+</script>
+
+<script>
+function showEnding() {
+    document.getElementById("endingScreen").style.display = "block";
+
+    document.getElementById("bgmusic").pause();
+    document.getElementById("finalMusic").play();
+}
+function goBack() {
+    document.getElementById("endingScreen").style.display = "none";
+
+    document.getElementById("finalMusic").pause();
+    document.getElementById("finalMusic").currentTime = 0;
+
+    document.getElementById("bgmusic").play();
+}
+</script>
+
+</body>
+</html>
