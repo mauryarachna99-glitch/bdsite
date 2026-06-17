@@ -260,15 +260,10 @@ function showEnding() {
     document.getElementById("endingScreen").style.display = "block";
 
     document.getElementById("bgmusic").pause();
-    document.getElementById("_Beliya_Lekh_Ringtone_(by Fringster.com).mp3").play();
-}
-function goBack() {
-    document.getElementById("endingScreen").style.display = "none";
 
-    document.getElementById("finalMu_Beliya_Lekh_Ringtone_(by Fringster.com).mp3sic").pause();
-    document.getElementById("_Beliya_Lekh_Ringtone_(by Fringster.com).mp3").currentTime = 0;
-
-    document.getElementById("bgmusic").play();
+    let music = document.getElementById("finalMusic");
+    music.currentTime = 0;
+    music.play().catch(err => console.log(err));
 }
 </script>
 
